@@ -70,8 +70,8 @@ def _save_product_info(product, sub_category_id):
         cursor.execute(get_max_msp_id)
         msp_id = cursor.fetchone()[0]
         product_dict = {'SubcategoryId': sub_category_id ,'Name':product['name'].replace(" Price", ""),
-                        'Price':0, 'isActive':1, 'mspId':msp_id, 'InsertedProperties':0, 'IsVisited':0 ,
-                        'ImageInserted':0, 'Image':'test', 'IsBestSeller':0 , 'Popularity':0}
+                        'Price':product['price'], 'isActive':1, 'mspId':msp_id, 'InsertedProperties':0, 'IsVisited':0 ,
+                        'ImageInserted':0, 'Image':product['images'][0], 'IsBestSeller':0 , 'Popularity':0}
         cursor.execute(add_product, product_dict)
         product_id = cursor.lastrowid
         stores = eval(product['stores'])
