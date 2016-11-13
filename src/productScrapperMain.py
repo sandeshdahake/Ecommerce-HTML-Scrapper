@@ -11,4 +11,3 @@ for product in productRawData:
     product_json._save_product_info(product, sub_cat_id)
 #     for store, rating in product['reviews'].items():
 #         print(store, "-->", rating)
-
