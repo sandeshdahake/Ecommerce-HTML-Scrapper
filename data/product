@@ -1,23 +1,46 @@
 [
   {
-    "stores": "{'Amazon.in': {'url': 'http://www.amazon.in/gp/offer-listing/B015ZOW2EM?condition=new&sort=price&tag=comparerajaco-21', 'rating': 'https://cdn.compareraja.in/images/rating5.png'}, 'FlipKart': {'url': 'http://dl.flipkart.com/dl/haier-565-l-frost-free-side-refrigerator/p/itme7v8natxazuxs?pid=RFRE7V8NPZCA5GCC&affid=compareraj', 'rating': 'https://cdn.compareraja.in/images/rating4.png'}, 'SnapDeal': {'url': 'http://www.snapdeal.com/product/haier-hrf618ss-565-litres-side/644014262467?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=3770&aff_sub=cmraja', 'rating': 'https://cdn.compareraja.in/images/rating4.png'}, 'Shopclues': {'url': 'http://affiliateshopclues.com/?a=902&c=69&p=r&s1=&ckmrdr=http://www.shopclues.com/haier-hrf-618ss-565-l-side-by-side-refrigerator-1.html%3futm_source%3dcompareraja%26utm_medium%3dCPS', 'rating': 'https://cdn.compareraja.in/images/rating4.png'}}",
-    "name": "Haier HRF 618SS Side By Side Door 565 Litres Frost Free Refrigerator Price",
+    "stores": "{'Amazon.in': {'url': 'http://www.amazon.in/gp/offer-listing/B01DM8HRKC?condition=new&sort=price&tag=comparerajaco-21'}, 'SnapDeal': {'url': 'http://www.snapdeal.com/product/lg-260-ltrs-glq292sham-frost/676690882463?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=3770&aff_sub=cmraja'}, 'FlipKart': {'url': 'http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj'}}",
+    "name": "LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator Price",
+    "price": "Rs. 22,990",
     "image_urls": [
-      "https://cdn.compareraja.in/images/product/large/Haier HRF 618SS Side By Side Door 565 Litres Frost Free Refrigerator.jpeg",
-      "https://cdn.compareraja.in/images/product/left/haier-hrf-618ss-side-by-side-door-565-litres-frost-free-refrigeratorB.jpeg",
-      "https://cdn.compareraja.in/images/product/large/haier-hrf-618ss-side-by-side-door-565-litres-frost-free-refrigeratorA.jpeg"
+      "https://cdn.compareraja.in/images/product/large/LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator.jpeg"
     ],
     "reviews": {
       "compare-raja": "5",
-      "new-flipkart": "4.7",
+      "new-flipkart": "4.1",
       "amazon": "5"
     },
-    "productDetails": "{'WARRANTY': {'Warranty Summary': '11 Years compressor warranty and 1 year comprehensive product warranty from Haier India'}, 'Performance Features': {'Air Flow Type': 'Multi Air Flow', 'Other Performance Features': 'Super Cool and Super Freeze Function, Digital Control, Express Freezing', 'Moisture Control': 'Yes'}, 'Features': {'Body': 'Toughened Glass Shelves, ACM Body Material, PP Cabinet, Crystal Transparent Accessories Interior Finish , LED Display, Plain Stainless Steel', 'Egg Tray': 'Yes', 'Dimensions': '908 mm X 655 mm X 1790 mm', 'Weight': '98 Kg', 'Vegetable Tray': 'Yes', 'Number of Shelves': '5', 'Ice-Tray': 'Yes', 'Door Alarm': 'Yes'}, 'General': {'Door Type': 'Side By Side Door', 'Type': 'Frost Free', 'Actual Capacity': '565ltr', 'Capacity': '501ltr-600ltr'}, 'Additional Features': {'Other Features': '90\\xc2\\xb0 Contoured Door, A+ European Standard, Smart Digital Control, Holiday Function, Eco Friendly, Handle Type: Recess, Refrigerator Interior Light: LED Lamp, 1 Egg Tray, Freezer Interior Light: LED Lamp, Polyurethane Foam Insulation Type, Child Lock, Wheel Support'}, 'Convenience Features': {'Deodourizer': 'Yes', 'Door Lock': 'No', 'Other Convenience Features': 'Removable Rack, Removable Gasket, Rubber Gasket Type'}}",
-    "link": "exitoblnew('http://www.snapdeal.com/product/haier-hrf618ss-565-litres-side/644014262467?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=3770&aff_sub=cmraja','1492891','10','SnapDeal','Haier 565 Ltr Hrf-618ss Side By Side Refrigerator - Stainless Steel')",
+    "productDetails": "{'WARRANTY': {'Warranty Summary': '1 Year Comprehensive and 10 Years on the Smart Inverter Compressor from LG'}, 'Performance Features': {'Moisture Control': 'Yes'}, 'Features': {'Quick Freezer Zone': 'Yes', 'Egg Tray': 'Yes', 'Body': 'Toughened Glass', 'Dimensions': '585 X 1470 X 671  mm', 'Weight': '42 Kg', 'Vegetable Tray': 'Yes', 'Freezer Lamp': 'Yes', 'Number of Shelves': '2', 'Ice-Tray': 'Yes', 'Door Alarm': 'Yes'}, 'General': {'Capacity': '201ltr-300ltr', 'Star Rating': '3 Star', 'Door Type': 'Double Door', 'Actual Capacity': '260 Litres', 'Type': 'Frost Free', 'Freezer Type': 'Top Freezer'}, 'Additional Features': {'Other Features': 'Smart Connect, Smart Diagnosis System, LED Lighting'}, 'Convenience Features': {'Deodourizer': 'Yes', 'Door Lock': 'Yes'}}",
+    "link": "exitoblnew('http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj&affid=compareraj&affExtParam1=cmraja','7089181','10','FlipKart','LG 260 L Frost Free Double Door Refrigerator(GL-Q292SHAM, Hazel Aster)')",
     "images": [
-      "https://cdn.compareraja.in/images/product/large/Haier HRF 618SS Side By Side Door 565 Litres Frost Free Refrigerator.jpeg",
-      "https://cdn.compareraja.in/images/product/left/haier-hrf-618ss-side-by-side-door-565-litres-frost-free-refrigeratorB.jpeg",
-      "https://cdn.compareraja.in/images/product/large/haier-hrf-618ss-side-by-side-door-565-litres-frost-free-refrigeratorA.jpeg"
+      {
+        "url": "https://cdn.compareraja.in/images/product/large/LG%20GL%20Q292SHAM%20Double%20Door%20260%20Litres%20Frost%20Free%20Refrigerator.jpeg",
+        "path": "full/128bf6942c3c2b1b46e0cf00d29b399539afacba.jpg",
+        "checksum": "8a7e847fdae926ab658de53c9efdb76c"
+      }
+    ]
+  },
+    {
+    "stores": "{'Amazon.in': {'url': 'http://www.amazon.in/gp/offer-listing/B01DM8HRKC?condition=new&sort=price&tag=comparerajaco-21'}, 'SnapDeal': {'url': 'http://www.snapdeal.com/product/lg-260-ltrs-glq292sham-frost/676690882463?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=3770&aff_sub=cmraja'}, 'FlipKart': {'url': 'http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj'}}",
+    "name": "LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator Price",
+    "price": "Rs. 22,990",
+    "image_urls": [
+      "https://cdn.compareraja.in/images/product/large/LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator.jpeg"
+    ],
+    "reviews": {
+      "compare-raja": "5",
+      "new-flipkart": "4.1",
+      "amazon": "5"
+    },
+    "productDetails": "{'WARRANTY': {'Warranty Summary': '1 Year Comprehensive and 10 Years on the Smart Inverter Compressor from LG'}, 'Performance Features': {'Moisture Control': 'Yes'}, 'Features': {'Quick Freezer Zone': 'Yes', 'Egg Tray': 'Yes', 'Body': 'Toughened Glass', 'Dimensions': '585 X 1470 X 671  mm', 'Weight': '42 Kg', 'Vegetable Tray': 'Yes', 'Freezer Lamp': 'Yes', 'Number of Shelves': '2', 'Ice-Tray': 'Yes', 'Door Alarm': 'Yes'}, 'General': {'Capacity': '201ltr-300ltr', 'Star Rating': '3 Star', 'Door Type': 'Double Door', 'Actual Capacity': '260 Litres', 'Type': 'Frost Free', 'Freezer Type': 'Top Freezer'}, 'Additional Features': {'Other Features': 'Smart Connect, Smart Diagnosis System, LED Lighting'}, 'Convenience Features': {'Deodourizer': 'Yes', 'Door Lock': 'Yes'}}",
+    "link": "exitoblnew('http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj&affid=compareraj&affExtParam1=cmraja','7089181','10','FlipKart','LG 260 L Frost Free Double Door Refrigerator(GL-Q292SHAM, Hazel Aster)')",
+    "images": [
+      {
+        "url": "https://cdn.compareraja.in/images/product/large/LG%20GL%20Q292SHAM%20Double%20Door%20260%20Litres%20Frost%20Free%20Refrigerator.jpeg",
+        "path": "full/128bf6942c3c2b1b46e0cf00d29b399539afacba.jpg",
+        "checksum": "8a7e847fdae926ab658de53c9efdb76c"
+      }
     ]
   }
 ]

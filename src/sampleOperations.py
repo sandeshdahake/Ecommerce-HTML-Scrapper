@@ -1,3 +1,6 @@
+import locale
+#locale.atof('22,990')
+print(float('22,990'.replace(",","")))
 print(1+1)
 
 if 1==1:
