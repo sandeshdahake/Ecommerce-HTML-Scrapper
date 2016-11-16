@@ -2,6 +2,7 @@ import mysql.connector
 from mysql.connector import errorcode
 import product_json
 from furl import furl
+import re
 import locale
 
 add_sub_category = ("INSERT INTO compare2test.productsubcategories"
@@ -24,29 +25,35 @@ add_images="INSERT INTO compare2test.productimages(ProductId, Url, ZoomImageUrl)
 add_product_spec="INSERT INTO compare2test.ProductSpecs(ProductId, category, property, value, columnName, subCategoryId)" \
                  " VALUES (%(ProductId)s, %(category)s,%(property)s, %(value)s, %(columnName)s, %(subCategoryId)s)"
 avoid_duplicate_entry = "SELECT count(*) from compare2test.products WHERE NAME= %s"
-<<<<<<< HEAD
-
 call_meta_data_sp="setup_product_table"
-=======
->>>>>>> af17358d10367149d54bc6104ec478056425e459
+setup_up_product_image_url = "UPDATE "
+
 def _get_connection_():
     config = {
         'user': 'root',
-        'password': 'root',
-        'port':'8889',
+        'password':'',
+        'port':'3306',
         'host': 'localhost',
         'database': 'compare2test',
         'raise_on_warnings': True,
     }
+
+    # config = {
+    #     'user': 'root',
+    #     'password': 'root',
+    #     'port':'8889',
+    #     'host': 'localhost',
+    #     'database': 'compare2test',
+    #     'raise_on_warnings': True,
+    # }
     cnx = mysql.connector.connect(**config)
     return cnx
 
 
-def save_sub_category():
-    config_cat = product_json.read_json_file("../data/config.json")
+def save_sub_category(config_cat):
     sub_category_id=0
+    cnx = _get_connection_();
     try:
-        cnx = _get_connection_();
         cursor = cnx.cursor()
         cursor.execute(get_sub_category_by_name, config_cat)
         if cursor.fetchone() is None:
@@ -72,7 +79,7 @@ def save_sub_category():
     return sub_category_id
 
 
-def _save_product_info(product, sub_category_id):
+def _save_product_info(product, sub_category_id, sub_category_name):
     if eval(product['stores']):
         try:
             cnx = _get_connection_();
@@ -80,13 +87,8 @@ def _save_product_info(product, sub_category_id):
             args = [product['name'].replace(" Price", "")]
             cursor.execute(avoid_duplicate_entry,args)
             count = cursor.fetchone()[0]
-<<<<<<< HEAD
             if count == 0:
                 print("Processing Product ->",product['name'])
-=======
-
-            if count == 0:
->>>>>>> af17358d10367149d54bc6104ec478056425e459
                 cursor.execute(get_max_msp_id)
                 msp_id = cursor.fetchone()[0]
                 product_dict = {'SubcategoryId': sub_category_id ,'Name':product['name'].replace(" Price", ""),
@@ -107,25 +109,18 @@ def _save_product_info(product, sub_category_id):
                     product_store_dict={'ProductId':product_id,'WebstoreName':key,'WebstoreLabel':key,'WebstoreProductId':pid}
                     cursor.execute(add_store_id, product_store_dict)
                 for image in product['images']:
-                        image_dict = {'ProductId':product_id,'Url':'freezImages/'+image['path'],'ZoomImageUrl':'freezImages/'+image['path']}
+                        image_dict = {'ProductId':product_id,'Url':sub_category_name+'/'+image['path'],'ZoomImageUrl':sub_category_name+'/'+image['path']}
                         cursor.execute(add_images, image_dict)
                 product_detail = eval(product['productDetails']);
                 for category, sub_category in product_detail.items():
                     for property,value in sub_category.items():
-<<<<<<< HEAD
-                        product_spcs={'ProductId':product_id, 'category':category, 'property':property, 'value':value, 'columnName':property.replace(" ","_").replace("-",""), 'subCategoryId':sub_category_id}
-=======
-                        product_spcs={'ProductId':product_id, 'category':category, 'property':property, 'value':value, 'columnName':property.replace(" ","_"), 'subCategoryId':sub_category_id}
->>>>>>> af17358d10367149d54bc6104ec478056425e459
+                        # print( product_detail.index(category),"->",category,":", sub_category.index(property),"->", property)
+                        product_spcs={'ProductId':product_id, 'category':category, 'property':property, 'value':value, 'columnName':re.sub('\W+', '', property.replace(" ","_")), 'subCategoryId':sub_category_id}
                         cursor.execute(add_product_spec, product_spcs)
                 print(product_id);
                 cnx.commit()
             else :
-<<<<<<< HEAD
-                print(product['name'],"###############Product Already exist###########")
-=======
-                print("###############Product Already exist###########")
->>>>>>> af17358d10367149d54bc6104ec478056425e459
+                print(product['name'] ,"###############Product Already exist###########")
         except mysql.connector.Error as err:
             cnx.rollback()
             if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
@@ -136,13 +131,33 @@ def _save_product_info(product, sub_category_id):
                 print("Database does not exist")
             else:
                 print(err)
-<<<<<<< HEAD
         else:
             cursor.close()
             cnx.close()
         return 0;
     else:
         return 0;
+
+def set_up_main_product_image(sub_category_id):
+    try:
+        config_cat=[sub_category_id]
+        cnx = _get_connection_();
+        cursor = cnx.cursor()
+        cursor.execute(setup_up_product_image_url, config_cat)
+        cnx.commit()
+    except mysql.connector.Error as err:
+        cnx.rollback()
+        if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
+            print("already exists.")
+        elif err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+            print("Something is wrong with your user name or password")
+        elif err.errno == errorcode.ER_BAD_DB_ERROR:
+            print("Database does not exist")
+    else:
+        cursor.close()
+        cnx.close()
+    return 0
+
 
 def _copy_metadata(sub_category_id):
     try:
@@ -159,17 +174,7 @@ def _copy_metadata(sub_category_id):
             print("Something is wrong with your user name or password")
         elif err.errno == errorcode.ER_BAD_DB_ERROR:
             print("Database does not exist")
-=======
->>>>>>> af17358d10367149d54bc6104ec478056425e459
-        else:
-            cursor.close()
-            cnx.close()
-        return 0;
     else:
-<<<<<<< HEAD
         cursor.close()
         cnx.close()
     return 0
-=======
-        return 0;
->>>>>>> af17358d10367149d54bc6104ec478056425e459

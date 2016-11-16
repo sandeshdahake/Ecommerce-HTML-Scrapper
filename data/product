@@ -1,7 +1,7 @@
 [
   {
     "stores": "{'Amazon.in': {'url': 'http://www.amazon.in/gp/offer-listing/B01DM8HRKC?condition=new&sort=price&tag=comparerajaco-21'}, 'SnapDeal': {'url': 'http://www.snapdeal.com/product/lg-260-ltrs-glq292sham-frost/676690882463?utm_source=aff_prog&utm_campaign=afts&offer_id=17&aff_id=3770&aff_sub=cmraja'}, 'FlipKart': {'url': 'http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj'}}",
-    "name": "LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator Price",
+    "name": "LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator testtt Price",
     "price": "Rs. 22,990",
     "image_urls": [
       "https://cdn.compareraja.in/images/product/large/LG GL Q292SHAM Double Door 260 Litres Frost Free Refrigerator.jpeg"
@@ -33,7 +33,7 @@
       "new-flipkart": "4.1",
       "amazon": "5"
     },
-    "productDetails": "{'WARRANTY': {'Warranty Summary': '1 Year Comprehensive and 10 Years on the Smart Inverter Compressor from LG'}, 'Performance Features': {'Moisture Control': 'Yes'}, 'Features': {'Quick Freezer Zone': 'Yes', 'Egg Tray': 'Yes', 'Body': 'Toughened Glass', 'Dimensions': '585 X 1470 X 671  mm', 'Weight': '42 Kg', 'Vegetable Tray': 'Yes', 'Freezer Lamp': 'Yes', 'Number of Shelves': '2', 'Ice-Tray': 'Yes', 'Door Alarm': 'Yes'}, 'General': {'Capacity': '201ltr-300ltr', 'Star Rating': '3 Star', 'Door Type': 'Double Door', 'Actual Capacity': '260 Litres', 'Type': 'Frost Free', 'Freezer Type': 'Top Freezer'}, 'Additional Features': {'Other Features': 'Smart Connect, Smart Diagnosis System, LED Lighting'}, 'Convenience Features': {'Deodourizer': 'Yes', 'Door Lock': 'Yes'}}",
+    "productDetails": "{'WARRANTY': {'Warranty - Summary': '1 Year Comprehensive and 10 Years on the Smart Inverter Compressor from LG'}, 'Performance &Features': {'Moisture Control': 'Yes'}, 'Features': {'Quick Freezer Zone': 'Yes', 'Egg Tray': 'Yes', 'Body': 'Toughened Glass', 'Dimensions': '585 X 1470 X 671  mm', 'Weight': '42 Kg', 'Vegetable Tray': 'Yes', 'Freezer Lamp': 'Yes', 'Number of Shelves': '2', 'Ice-Tray': 'Yes', 'Door Alarm': 'Yes'}, 'General': {'Capacity': '201ltr-300ltr', 'Star Rating': '3 Star', 'Door Type': 'Double Door', 'Actual Capacity': '260 Litres', 'Type': 'Frost Free', 'Freezer Type': 'Top Freezer'}, 'Additional Features': {'Other Features': 'Smart Connect, Smart Diagnosis System, LED Lighting'}, 'Convenience Features': {'Deodourizer': 'Yes', 'Door Lock': 'Yes'}}",
     "link": "exitoblnew('http://dl.flipkart.com/dl/lg-260-l-frost-free-double-door-refrigerator/p/itmeh4dpccsxxhzn?pid=RFREH4DPEXGEWGQE&affid=compareraj&affid=compareraj&affExtParam1=cmraja','7089181','10','FlipKart','LG 260 L Frost Free Double Door Refrigerator(GL-Q292SHAM, Hazel Aster)')",
     "images": [
       {

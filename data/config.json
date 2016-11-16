@@ -1,5 +1,12 @@
+[
   {
-  "category_label": "TV",
-  "category_id": "1",
-  "category_name": "tv"
+    "caegory_label": "mobile",
+    "category_id": "1",
+    "category_name": "mobile"
+  },
+  {
+    "category_label": "TV",
+    "category_id": "2",
+    "category_name": "tv"
   }
+]

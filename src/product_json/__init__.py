@@ -1,4 +1,5 @@
 from product_json.product_json_scrap import read_json_file
+from product_json.product_json_scrap import remove_null_values
 from product_json.product_jason_db import save_sub_category
 from product_json.product_jason_db import _save_product_info
 from product_json.product_jason_db import _copy_metadata
