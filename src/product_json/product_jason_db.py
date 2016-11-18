@@ -56,13 +56,14 @@ def save_sub_category(config_cat):
     try:
         cursor = cnx.cursor()
         cursor.execute(get_sub_category_by_name, config_cat)
-        if cursor.fetchone() is None:
+        result = cursor.fetchone()
+        if result is None:
 #            sub_category_id = cursor.fetchone()[0]
             cursor.execute(add_sub_category,config_cat)
             sub_category_id = cursor.lastrowid
             cnx.commit()
         else:
-            sub_category_id = cursor.fetchall()[0][0]
+            sub_category_id = result[0]
     except mysql.connector.Error as err:
         cnx.rollback()
         if err.errno == errorcode.ER_TABLE_EXISTS_ERROR:
