@@ -5,47 +5,38 @@ from furl import furl
 import re
 import locale
 
-add_sub_category = ("INSERT INTO compare2test.productsubcategories"
+add_sub_category = ("INSERT INTO compareBlank.productsubcategories"
                 " (CategoryId, Name, Label, MetadataFile, CompareMetadataFile) VALUES"
                 " (%(category_id)s, %(category_name)s, %(category_label)s,'test','test' )")
 
-get_sub_category_by_name = ("SELECT id from compare2test.productsubcategories where Name= %(category_name)s");
+get_sub_category_by_name = ("SELECT id from compareBlank.productsubcategories where Name= %(category_name)s");
 
-add_product= "INSERT INTO compare2test.products (SubcategoryId, Name, Price, isActive, mspId," \
+add_product= "INSERT INTO compareBlank.products (SubcategoryId, Name, Price, isActive, mspId," \
              " InsertedProperties, IsVisited, ImageInserted, Image, IsBestSeller, Popularity)" \
              " VALUES (%(SubcategoryId)s, %(Name)s, %(Price)s, %(isActive)s, %(mspId)s, %(InsertedProperties)s" \
              ", %(IsVisited)s, %(ImageInserted)s, %(Image)s, %(IsBestSeller)s, %(Popularity)s);"
 
-get_max_msp_id = "select max(mspId)+ 1 from compare2test.products"
+get_max_msp_id = "select max(mspId)+ 1 from compareBlank.products"
 
-add_store_id="INSERT INTO compare2test.productwebstores (ProductId, WebstoreLabel, WebstoreName, WebstoreProductId)" \
+add_store_id="INSERT INTO compareBlank.productwebstores (ProductId, WebstoreLabel, WebstoreName, WebstoreProductId)" \
              " VALUES (%(ProductId)s, %(WebstoreLabel)s, %(WebstoreName)s, %(WebstoreProductId)s)"
-add_images="INSERT INTO compare2test.productimages(ProductId, Url, ZoomImageUrl)" \
+add_images="INSERT INTO compareBlank.productimages(ProductId, Url, ZoomImageUrl)" \
            " VALUES (%(ProductId)s, %(Url)s, %(ZoomImageUrl)s )"
-add_product_spec="INSERT INTO compare2test.ProductSpecs(ProductId, category, property, value, columnName, subCategoryId)" \
+add_product_spec="INSERT INTO compareBlank.ProductSpecs(ProductId, category, property, value, columnName, subCategoryId)" \
                  " VALUES (%(ProductId)s, %(category)s,%(property)s, %(value)s, %(columnName)s, %(subCategoryId)s)"
-avoid_duplicate_entry = "SELECT count(*) from compare2test.products WHERE NAME= %s"
+avoid_duplicate_entry = "SELECT count(*) from compareBlank.products WHERE NAME= %s"
 call_meta_data_sp="setup_product_table"
 setup_up_product_image_url = "UPDATE "
 
 def _get_connection_():
     config = {
-        'user': 'root',
-        'password':'',
-        'port':'3306',
-        'host': 'localhost',
-        'database': 'compare2test',
-        'raise_on_warnings': True,
+       'user': 'root',
+       'password': 'root',
+       'port':'8889',
+       'host': 'localhost',
+       'database': 'compare2test',
+       'raise_on_warnings': True,
     }
-
-    # config = {
-    #     'user': 'root',
-    #     'password': 'root',
-    #     'port':'8889',
-    #     'host': 'localhost',
-    #     'database': 'compare2test',
-    #     'raise_on_warnings': True,
-    # }
     cnx = mysql.connector.connect(**config)
     return cnx
 
@@ -106,7 +97,8 @@ def _save_product_info(product, sub_category_id, sub_category_name):
                     if key.lower()=="amazon" or key.lower() == "snapdeal":
                         pid= f.path.segments[2]
                     elif key.lower() == "flipkart":
-                        pid= f.args['pid']
+                        if 'pid' in f.args:
+                            pid= f.args['pid']
                     product_store_dict={'ProductId':product_id,'WebstoreName':key,'WebstoreLabel':key,'WebstoreProductId':pid}
                     cursor.execute(add_store_id, product_store_dict)
                 for image in product['images']:

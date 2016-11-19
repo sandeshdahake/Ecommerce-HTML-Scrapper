@@ -6,8 +6,8 @@
 -- Generation Time: Oct 19, 2016 at 06:03 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
--- create DATABASE compare2test;
-USE compare2test;
+-- create DATABASE compareBlank;
+USE compareBlank;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `compare2test`
+-- Database: `compareBlank`
 --
 
 -- --------------------------------------------------------
@@ -317,6 +317,19 @@ CREATE TABLE IF NOT EXISTS `subcategoryhotproperties` (
   `PrependText` varchar(500) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `Id` int(11) NOT NULL,
+  `Type` varchar(50) NOT NULL,
+  `FirstName` varchar(100) NOT NULL,
+  `LastName` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `LastLoggedIn` datetime NOT NULL,
+  `Password` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 CREATE TABLE IF NOT EXISTS `userratings` (
   `Id` int(11) NOT NULL,
@@ -326,6 +339,20 @@ CREATE TABLE IF NOT EXISTS `userratings` (
   `ReviewTitle` varchar(500) NOT NULL,
   `ReviewDescription` text NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5685 DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `variantproducts`
+--
+
+CREATE TABLE IF NOT EXISTS `variantproducts` (
+  `Id` int(11) NOT NULL,
+  `ProductId` int(11) NOT NULL,
+  `VariantProperty` varchar(500) NOT NULL,
+  `VariantId` int(11) DEFAULT NULL,
+  `VariantMSPId` int(11) NOT NULL,
+  `VariantValue` varchar(500) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=168 DEFAULT CHARSET=latin1;
+
 
 --
 -- Table structure for table `webstores`
@@ -368,17 +395,6 @@ ALTER TABLE `filterdetails`
 ALTER TABLE `filters`
   ADD PRIMARY KEY (`Id`), ADD KEY `ParentSubcategoryId` (`ParentSubcategoryId`), ADD KEY `ProductPropertyName` (`ProductPropertyName`);
 
---
--- Indexes for table `laptops`
---
-ALTER TABLE `laptops`
-  ADD PRIMARY KEY (`Id`), ADD KEY `ProductId` (`ProductId`);
-
---
--- Indexes for table `mobiles`
---
-ALTER TABLE `mobiles`
-  ADD PRIMARY KEY (`Id`), ADD KEY `ProductId` (`ProductId`);
 
 --
 -- Indexes for table `mspwebstoreurls`
@@ -477,19 +493,6 @@ ALTER TABLE `filterdetails`
 --
 ALTER TABLE `filters`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT for table `laptops`
---
-ALTER TABLE `laptops`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1158;
---
--- AUTO_INCREMENT for table `mobiles`
---
-ALTER TABLE `mobiles`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4530;
---
--- AUTO_INCREMENT for table `mspwebstoreurls`
---
 ALTER TABLE `mspwebstoreurls`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 --
@@ -556,23 +559,6 @@ ALTER TABLE `webstores`
 -- Constraints for dumped tables
 --
 
---
--- Constraints for table `filters`
---
-ALTER TABLE `filters`
-ADD CONSTRAINT `Parent Subcategory for filter` FOREIGN KEY (`ParentSubcategoryId`) REFERENCES `productsubcategories` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `laptops`
---
-ALTER TABLE `laptops`
-ADD CONSTRAINT `laptop parent product` FOREIGN KEY (`ProductId`) REFERENCES `products` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `mobiles`
---
-ALTER TABLE `mobiles`
-ADD CONSTRAINT `Parent Product Id` FOREIGN KEY (`ProductId`) REFERENCES `products` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `productimages`
